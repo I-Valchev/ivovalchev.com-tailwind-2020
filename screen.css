@@ -1,0 +1,32 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap');
+
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+
+/* Tailwind customisations */
+.link {
+    @apply border-b border-gray-500;
+}
+
+.link:hover {
+    @apply border-gray-700;
+}
+
+.slide-down:not(.invisible) {
+    @apply translate-y-6;
+}
+
+
+@tailwind utilities;
+
+@responsive {
+    .mode-dark .dark-bg-transparent {
+        @apply bg-transparent;
+    }
+
+    .mode-dark .dark-border-gray-700 {
+        @apply border-gray-700;
+    }
+}

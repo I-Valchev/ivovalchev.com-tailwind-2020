@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-800 dark:text-gray-100 font-display antialiased">
+        <div class="flex justify-between items-center">
+            <span id="modeToggle" class="cursor-pointer shadow-md relative h-16 w-16 inline-block bg-gray-700 dark:bg-gray-100 rounded-br-full text-xl">
+                <span class="absolute mt-3 ml-4" data-icon-light="🌙" data-icon-dark="☀️">🌙</span>
+            </span>
+
+            <div class="relative">
+                <i id="openMenu" class="cursor-pointer z-20 relative mr-6 mt-5 lg:hidden fas fa-bars"></i>
+                <i id="closeMenu" class="cursor-pointer z-20 relative hidden mr-6 mt-5 lg:hidden fas fa-times"></i>
+
+                <ul id="menu" class="z-20 transition-all duration-200 ease-in-out slide-down transform absolute invisible w-48 lg:w-auto lg:visible  lg:flex -mt-4 pt-4 right-0 bg-white lg:bg-transparent border-b border-transparent lg:border-gray-300 lg:dark-border-gray-700 lg:pb-0 shadow-2xl lg:shadow-none m-4 lg:mb-0 lg:pb-0 rounded-md lg:rounded-none dark:bg-gray-700 lg:dark-bg-transparent">
+                    <li><a class="inline-block -mb-px lg:border-b border-transparent hover:border-gray-600 pb-4 mx-4 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark-hover:text-gray-100" href="#">Home</a></li>
+                    <li><a class="inline-block -mb-px lg:border-b border-transparent hover:border-gray-600 pb-4 mx-4 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark-hover:text-gray-100" href="#">Projects</a></li>
+                    <li><a class="inline-block -mb-px lg:border-b border-transparent hover:border-gray-600 pb-4 mx-4 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark-hover:text-gray-100" href="#">Articles</a></li>
+                    <li><a class="inline-block -mb-px lg:border-b border-transparent hover:border-gray-600 pb-4 mx-4 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark-hover:text-gray-100" href="#">Photography</a></li>
+                    <li><a class="inline-block -mb-px lg:border-b border-transparent hover:border-gray-600 pb-4 mx-4 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark-hover:text-gray-100" href="#">Education</a></li>
+                </ul>
+                <button id="menuOutsideClick" class="hidden lg:hidden fixed inset-0 w-full h-full z-10"></button>
+            </div>
+
+        </div>
+
+
+        <div class="p-8 sm:px-16 lg:max-w-4xl lg:m-auto">
+            <div class="flex items-end">
+                <img class="rounded w-16 h-16 sm:w-24 sm:h-24" src="https://www.ivovalchev.com/static/7db2356c86c0aa3ae521a7103bfffde8/6bf53/ivo.jpg" />
+                <h1 class="ml-4 text-4xl"><span class="animate-wiggle inline-block">👋</span> Hi, I'm Ivo</h1>
+            </div>
+
+            <p class="mt-4 text-xl tracking-tight">I’m a millennial product manager and full-stack developer.</p>
+
+            <p class="mt-4 text-xl tracking-tight">Born in Bulgaria 🇧🇬, studied in the United Kingdom 🇬🇧 and
+                now working in the Netherlands 🇳🇱.</p>
+
+            <p class="mt-4 text-xl tracking-tight">I started learning about software development back in 2011, and have completed 3 levels of formal
+            <a href="#" class="link">education</a> since.</p>
+
+            <p class="mt-4 text-xl tracking-tight">
+                These days I'm involved with steering the direction of <a class="link" href="#">open source</a> projects and developing
+                Bolt CMS. In addition, I create and maintain <a class="link" href="#">client websites</a> for orgs like
+                Mauritshuis and the EU 🇪🇺 digital library Europeana.
+            </p>
+
+            <p class="mt-4 text-xl tracking-tight">Oh, I also like writing about software. If you wanna know more, check out some of my <a href="#" class="link">articles</a>.</p>
+
+            <p class="mt-4 text-xl tracking-tight">
+                Besides work, I’m a hobbyist <a href="#" class="link">photographer</a> and political nerd. I care about <a href="#" class="link">#equality</a> and <a href="#" class="link">#humanrights</a>. Did I mention I live 7 minutes away from the International Court of Justice?
+            </p>
+
+            <button class="mt-8 rounded bg-orange-300 focus:outline-none text-gray-800 p-2 w-full uppercase">Contact me</button>
+        </div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>

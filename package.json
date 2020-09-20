@@ -1,0 +1,12 @@
+{
+  "name": "valchev-2020-tailwind",
+  "version": "1.0.0",
+  "description": "Ivo Valchev's personal site. Built in 2020 with tailwindcss",
+  "main": "index.html",
+  "author": "Ivo Valchev <ivo.v.valchev@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "tailwindcss": "^1.8.10",
+    "tailwindcss-dark-mode": "^1.1.6"
+  }
+}

@@ -656,35 +656,35 @@ a:hover {
 
 /* end sliding menu on mobile */
 
-/* Article styles */
+/* formatted styles */
 
-.article h1 {
+.formatted h1 {
   font-size: 2.25rem;
 }
 
-.article h3 {
+.formatted h3 {
   font-size: 1.875rem;
   margin-top: 1.5rem;
 }
 
-.article h4 {
+.formatted h4 {
   font-size: 1.5rem;
   margin-top: 1rem;
 }
 
-.article ul {
+.formatted ul {
   list-style-type: disc;
   font-size: 1.25rem;
   margin-top: 1rem;
 }
 
-.article p {
+.formatted p {
   margin-top: 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
 }
 
-.article blockquote {
+.formatted blockquote {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border-left-width: 4px;
@@ -692,7 +692,7 @@ a:hover {
   font-size: 1.25rem;
 }
 
-.article img {
+.formatted img {
   border-radius: 0.25rem;
 }
 

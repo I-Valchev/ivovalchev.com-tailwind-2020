@@ -2,22 +2,23 @@
  * DARK MODE TOGGLE
  */
 function checkDarkMode() {
-  if (
-    window.matchMedia &&
-    window.matchMedia('(prefers-color-scheme: dark)').matches
-  ) {
-    return true
+  if (document.cookie.includes('mode')) {
+    return document.cookie.match('(mode=)([^\\s]+)')[2] === 'dark';
   }
-  return false
+
+  return window.matchMedia &&
+    window.matchMedia('(prefers-color-scheme: dark)').matches;
+
 }
 if (checkDarkMode()) {
-  document.documentElement.classList.add('mode-dark')
+  document.documentElement.classList.add('mode-dark');
 } else {
   document.documentElement.classList.remove('mode-dark')
 }
 
 document.getElementById('modeToggle').addEventListener('click', function(){
   const isDark = document.documentElement.classList.toggle('mode-dark');
+  document.cookie = "mode=" + (isDark ? "dark" : "light") + "; path=/;";
   const content = document.getElementById('modeToggle').querySelector('span');
   content.innerHTML = isDark ? content.getAttribute('data-icon-dark') : content.getAttribute('data-icon-light');
 });

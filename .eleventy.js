@@ -5,6 +5,8 @@ module.exports = function(eleventyConfig) {
     "css" // css is not yet a recognized template extension in Eleventy
   ]);
 
+  eleventyConfig.addPassthroughCopy("input/script.js");
+
   return {
     dir: {
       input: "./input"

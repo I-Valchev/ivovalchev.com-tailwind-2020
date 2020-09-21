@@ -622,35 +622,81 @@ video {
 
 /* Tailwind customisations */
 
-.link {
+a {
   border-bottom-width: 1px;
   --border-opacity: 1;
   border-color: #a0aec0;
   border-color: rgba(160, 174, 192, var(--border-opacity));
 }
 
-.link:hover {
+a:hover {
   --border-opacity: 1;
   border-color: #4a5568;
   border-color: rgba(74, 85, 104, var(--border-opacity));
 }
 
-.mode-dark .link {
+.mode-dark a {
   --border-opacity: 1;
   border-color: #4a5568;
   border-color: rgba(74, 85, 104, var(--border-opacity));
 }
 
-.mode-dark .link:hover {
+.mode-dark a {
   border-bottom-width: 1px;
   --border-opacity: 1;
   border-color: #a0aec0;
   border-color: rgba(160, 174, 192, var(--border-opacity));
 }
+
+/* sliding menu on mobile */
 
 .slide-down:not(.invisible) {
   --transform-translate-y: 1.5rem;
 }
+
+/* end sliding menu on mobile */
+
+/* Article styles */
+
+.article h1 {
+  font-size: 2.25rem;
+}
+
+.article h3 {
+  font-size: 1.875rem;
+  margin-top: 1.5rem;
+}
+
+.article h4 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.article ul {
+  list-style-type: disc;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+.article p {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.article blockquote {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-left-width: 4px;
+  padding: 1rem;
+  font-size: 1.25rem;
+}
+
+.article img {
+  border-radius: 0.25rem;
+}
+
+/* End article styles */
 
 .space-y-0 > :not(template) ~ :not(template){
   --space-y-reverse: 0;

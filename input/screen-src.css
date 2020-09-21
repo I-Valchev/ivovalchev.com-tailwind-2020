@@ -6,25 +6,58 @@
 @tailwind components;
 
 /* Tailwind customisations */
-.link {
+a {
     @apply border-b border-gray-500;
 }
 
-.link:hover {
+a:hover {
     @apply border-gray-700;
 }
 
-.mode-dark .link {
+.mode-dark a {
     @apply border-gray-700;
 }
 
-.mode-dark .link:hover {
+.mode-dark a {
     @apply border-b border-gray-500;
 }
 
+/* sliding menu on mobile */
 .slide-down:not(.invisible) {
     @apply translate-y-6;
 }
+/* end sliding menu on mobile */
+
+/* formatted styles */
+.formatted h1 {
+    @apply text-4xl;
+}
+
+.formatted h3 {
+    @apply text-3xl mt-6;
+}
+
+.formatted h4 {
+    @apply text-2xl mt-4;
+}
+
+.formatted ul {
+    @apply list-disc text-xl mt-4;
+}
+
+.formatted p {
+    @apply mt-4 text-xl leading-normal;
+}
+
+.formatted blockquote {
+    @apply mt-4 mb-4 border-l-4 p-4 text-xl;
+}
+
+.formatted img {
+    @apply rounded;
+}
+
+/* End article styles */
 
 
 @tailwind utilities;

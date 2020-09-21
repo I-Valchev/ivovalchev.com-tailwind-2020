@@ -6,8 +6,9 @@
   "author": "Ivo Valchev <ivo.v.valchev@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "npx tailwindcss build input/screen-src.css -o input/screen.css && eleventy --serve",
-    "build": "npx tailwindcss build input/screen-src.css -o input/screen.css && eleventy"
+    "tailwind": "npx tailwindcss build input/screen-src.css -o input/screen.css",
+    "start": "npm run tailwind && eleventy --serve",
+    "build": "npm run tailwind && eleventy"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.11.0",

@@ -1,0 +1,46 @@
+---
+layout: base.liquid
+---
+<div class="formatted">
+    <h1>7 tips for reading others&rsquo; code with understanding (especially if you do not know the&nbsp;system)</h1>
+    <figure>
+        <img src="https://cdn-images-1.medium.com/max/800/1*zaWiiIgwcbeDzZfWgZXfXw.jpeg" alt="" data-image-id="1*zaWiiIgwcbeDzZfWgZXfXw.jpeg" data-width="1600" data-height="800" />
+    </figure>
+    <h3><strong>So that our thoughts aren&rsquo;t few and far&nbsp;between:</strong></h3>
+    <ul>
+        <li>This article consists of a list of techniques which I have found through experience and the experiences of others</li>
+        <li>It primarily focuses on finding your way around web applications implementing the MVC pattern, however most tips are applicable to programming as a whole</li>
+        <li>These techniques will be more useful if you have prior experience with programming and your concern is more about the <em>current</em> language/system/setup.</li>
+    </ul>
+    <h3>Intro blah-blah</h3>
+    <p>Imagine you were me: first day at work at the new workplace, given access to the web server where the company website is hosted and that is pretty much it. It is now your (sole) responsibility to maintain and develop this software according to the needs of the company you work for &mdash; you cannot go and ask the guy who wrote the code what happened. This was me a year ago.</p>
+    <p>The only thing I knew prior to this encounter was that the website backend was written in PHP. Anyway, I found out there is a Git repository and started browsing through the code and the commits. After a few minutes of reading code in a language I had never worked with before (yet alone the web framework on top of it), it gradually began to mean something, here and there it made some sense. But then it became apparent that some things don&rsquo;t add up &mdash; pages are rendered at URLs that should not exist, there is functionality which is not defined anywhere in the code I was looking at. It turns out parts of the website work under the more recently deployed PHP framework, whilst others are legacy Classic ASP code &mdash; and I had programming experience in neither of these.</p>
+    <p>It was then thatI realised how important it is to develop the ability to read code (even without knowing the syntax of the language it is written in) as much and as further as possible.</p>
+    <h3>The nitty-gritty</h3>
+    <p>At first, all you should care about is the what. What does this code do? Ignore the how and for the time being ignore the why. To get the what, you can take advantage of the following strategies:</p>
+    <h4>1. Walk backwards</h4>
+    <p>It would seem natural to first start exploring &ldquo;the database&rdquo; (or to be more precise the models of your MVC framework) to see what kind of data is stored, then move to the controllers to observe how this data is manipulated and then, if needed, study how this content gets rendered.</p>
+    <p>However my experience and that of <a href="https://selftaughtcoders.com/how-to-quickly-and-effectively-read-other-peoples-code/" target="_blank" rel="noopener" data-href="https://selftaughtcoders.com/how-to-quickly-and-effectively-read-other-peoples-code/">others</a> suggest another strategy:</p>
+    <p><strong>Start from the actual results</strong>, I would even say take a look at the website itself, have a go with it, explore what it does so that you know what functionality to expect to see implemented in the code.</p>
+    <p><strong>Then navigate through to the view</strong>, which chance is will reveal what kind of data is stored and to some extent in what form. <strong>From there you can go further backwards to the controller and reach the model too</strong>.</p>
+    <p><em>It is important to remind that you are trying to answer the &ldquo;what&rdquo;, not the &ldquo;how&rdquo;, i.e. as long as you know what actionAttachmentDownload() does, for now you shouldn&rsquo;t care how exactly it does it.</em></p>
+    <p>This leads me to the next one, namely:</p>
+    <h4>2. Explore feature by&nbsp;feature</h4>
+    <p>Code exploration in the order mentioned above will almost certainly guarantee you learn how things work on a &ldquo;feature by feature&rdquo; level. You do not need to stare at the big picture as it will make the task much more difficult. Do not overcomplicate things.</p>
+    <h4>3. Use&nbsp;grep</h4>
+    <p>As dumb as it may sound, at the very beginning I found it very useful to search for actual plain text. Especially when you are dealing with a more complex system (that you know very little about), trying to find your way through endless folders, subfolders and files is quite challenging. Identify unique names which will help you locate what you are looking for and dive in. (For those unaware, <em>grep</em> is a command-line utility for searching plain-text)</p>
+    <h4>4. Don&rsquo;t trust comments. Trust&nbsp;code.</h4>
+    <p>We often get told (or at least I do at university) to document the code with comments, even by creating specs detailing how to write the comments! I will not engage into the seemingly endless discussion about self-documenting code vs documenting code through comments (despite having my views on it). However in the cases when you are dealing with old legacy code (which was what I had to wrestle with), it is much safer to stick to the code that gets executed and not the comments, which would have been written at the time of creation and probably not updated since.</p>
+    <h4>5. Expect to find&nbsp;garbage</h4>
+    <p>In my particular case there was a lot of garbage code &mdash; functions or entire subsystems no longer in use. Companies are less likely to change their business models than their systems, therefore it is not unusual that you find the same or similar goals/functionalities achieved by using different &ldquo;technologies&rdquo;.</p>
+    <blockquote>&ldquo;<strong>Of course bad code can be cleaned up. But it&rsquo;s very expensive.</strong>&rdquo;― Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship</blockquote>
+    <p>For me, it was the newer PHP-based implementation with its own database and everything on one side, and the older ASP on the other; and the existing overlap between the two. Therefore, it is helpful to expect to find garbage and bear this in mind when you are trying to figure out what code gets executed when (and if at all).</p>
+    <h4>6. Write stuff&nbsp;down</h4>
+    <p>As soon as you get your head around what a large-enough component of the code you are getting the grasp of does, it is easier to write what you have found out down than to remember it. Your focus should be on exploration. Depending on your preference, you may want to document every single step down or scribble a word or two to facilitate recall.</p>
+    <h4>7. Find the automated tests</h4>
+    <p>This should probably be No.1 on your &ldquo;how to read others&rsquo; code&rdquo; list. Unit tests, in particular, are meant to be as simple as possible. You do not even need to look at the actual test &mdash; skimming through unit tests&rsquo; names will give you an idea of what they test, hence what the system does.</p>
+    <h3>So basically&hellip;</h3>
+    <p>These are tips which I found helpful when faced with the situation of having to read, understand and work on an implementation written in two languages I had never used before. These are, of course, meant to just help one get started and will in no case be sufficient in the medium- and long-terms, when advanced knowledge is required to develop functionality and code which others in turn will need to get comfortable with.</p>
+    <p>Oh by the way, this is my first article ever. I expect there to be much room for improvement and will value any feedback&mdash; if you have any, please do let me know by leaving a comment below or contacting me at <a href="mailto:me@ivovalchev.com" target="_blank" data-href="mailto:me@ivovalchev.com">me@ivovalchev.com</a>.</p>
+    <p>Till next time. 😉</p>
+</div>

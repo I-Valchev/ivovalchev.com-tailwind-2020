@@ -18,7 +18,7 @@ a:hover {
     @apply border-gray-700;
 }
 
-.mode-dark a {
+.mode-dark a:hover {
     @apply border-b border-gray-500;
 }
 

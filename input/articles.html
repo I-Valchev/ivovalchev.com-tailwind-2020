@@ -3,11 +3,10 @@ layout: base.liquid
 ---
 
 <h1 class="text-4xl">Articles</h1>
-<h2 class="mt-6 text-2xl">How to build a killer pricing page: a case study</h2>
-<p class="mt-2 text-gray-600 dark:text-gray-500">Pricing pages have a huge impact on conversion. Read the Miro case
-    study + research to build a great one!
-</p>
-<a class="mt-2 inline-block link text-sm" href="#"><i class="fas fa-link"></i> Check out this article</a>
-<h2 class="mt-8 text-2xl">How to learn product</h2>
-<p class="mt-2 text-gray-600 dark:text-gray-500">The 6 step guide to learning product</p>
-<a class="mt-2 inline-block link text-sm" href="#"><i class="fas fa-link"></i> Check out this article</a>
+
+{%- for article in collections.articles -%}
+ <h2 class="mt-8 text-2xl">{{ article.data.title }}</h2>
+    <p class="mt-2 text-gray-600 dark:text-gray-500">{{article.data.excerpt}}</p>
+    <a class="mt-2 inline-block link text-sm" href="{{ article.url }}"><i class="fas fa-link"></i> Check out this article</a>
+{%- endfor -%}
+

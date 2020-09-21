@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="/screen.css">
+</head>
+<body class="bg-gray-100 dark:bg-gray-800 dark:text-gray-100 font-display antialiased">
+    <nav class="flex justify-between items-center">
+             <span id="modeToggle"
+                   class="cursor-pointer shadow-md relative h-16 w-16 inline-block bg-gray-700 dark:bg-gray-100 rounded-br-full text-xl">
+             <span class="absolute mt-3 ml-4" data-icon-light="🌙" data-icon-dark="☀️">🌙</span>
+             </span>
+        <div class="relative">
+            <i id="openMenu" class="cursor-pointer z-20 relative mr-6 mt-5 lg:hidden fas fa-bars"></i>
+            <i id="closeMenu" class="cursor-pointer z-20 relative hidden mr-6 mt-5 lg:hidden fas fa-times"></i>
+            <ul id="menu"
+                class="z-20 transition-all duration-200 ease-in-out slide-down transform absolute invisible w-48 lg:w-auto lg:visible  lg:flex -mt-4 pt-4 right-0 bg-white lg:bg-transparent border-b border-transparent lg:border-gray-300 lg:dark-border-gray-700 lg:pb-0 shadow-2xl lg:shadow-none m-4 lg:mb-0 lg:pb-0 rounded-md lg:rounded-none dark:bg-gray-700 lg:dark-bg-transparent">
+                <li>
+                    <a class="inline-block -mb-px lg:border-b border-transparent hover:border-gray-600 pb-4 mx-4 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark-hover:text-gray-100"
+                       href="/">Home</a>
+                </li>
+                <li>
+                    <a class="inline-block -mb-px lg:border-b border-transparent hover:border-gray-600 pb-4 mx-4 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark-hover:text-gray-100"
+                       href="/projects">Projects</a>
+                </li>
+                <li>
+                    <a class="inline-block -mb-px lg:border-b border-transparent hover:border-gray-600 pb-4 mx-4 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark-hover:text-gray-100"
+                       href="/articles">Articles</a>
+                </li>
+                <li>
+                    <a class="inline-block -mb-px lg:border-b border-transparent hover:border-gray-600 pb-4 mx-4 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark-hover:text-gray-100"
+                       href="#">Photography</a>
+                </li>
+                <li>
+                    <a class="inline-block -mb-px lg:border-b border-transparent hover:border-gray-600 pb-4 mx-4 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark-hover:text-gray-100"
+                       href="#">Education</a>
+                </li>
+            </ul>
+            <button id="menuOutsideClick" class="hidden lg:hidden fixed inset-0 w-full h-full z-10"></button>
+        </div>
+    </nav>
+
+    <div class="p-8 sm:px-16 lg:max-w-4xl lg:m-auto">
+        {{ content|safe }}
+    </div>
+<script src="/script.js"></script>
+</body>
+</html>

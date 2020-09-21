@@ -635,6 +635,19 @@ video {
   border-color: rgba(74, 85, 104, var(--border-opacity));
 }
 
+.mode-dark .link {
+  --border-opacity: 1;
+  border-color: #4a5568;
+  border-color: rgba(74, 85, 104, var(--border-opacity));
+}
+
+.mode-dark .link:hover {
+  border-bottom-width: 1px;
+  --border-opacity: 1;
+  border-color: #a0aec0;
+  border-color: rgba(160, 174, 192, var(--border-opacity));
+}
+
 .slide-down:not(.invisible) {
   --transform-translate-y: 1.5rem;
 }

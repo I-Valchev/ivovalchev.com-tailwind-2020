@@ -709,7 +709,7 @@ a:hover {
 /* Gallery styles */
 
 .gallery a {
-  border-width: 0;
+  border-style: none;
 }
 
 .gallery img {
@@ -725,6 +725,8 @@ a:hover {
   max-width: 90vw !important;
   max-height: 90vh !important;
 }
+
+/* End of gallery styles */
 
 .space-y-0 > :not(template) ~ :not(template){
   --space-y-reverse: 0;

@@ -8,20 +8,25 @@ function checkDarkMode() {
 
   return window.matchMedia &&
     window.matchMedia('(prefers-color-scheme: dark)').matches;
-
 }
 if (checkDarkMode()) {
   document.documentElement.classList.add('mode-dark');
+  handleModeChange(true);
 } else {
   document.documentElement.classList.remove('mode-dark')
+  handleModeChange(false);
 }
 
 document.getElementById('modeToggle').addEventListener('click', function(){
   const isDark = document.documentElement.classList.toggle('mode-dark');
+  handleModeChange(isDark);
+});
+
+function handleModeChange(isDark) {
   document.cookie = "mode=" + (isDark ? "dark" : "light") + "; path=/;";
   const content = document.getElementById('modeToggle').querySelector('span');
   content.innerHTML = isDark ? content.getAttribute('data-icon-dark') : content.getAttribute('data-icon-light');
-});
+}
 /** END DARK MODE TOGGLE **/
 
 

@@ -64,8 +64,9 @@ a:hover {
 
 /* Gallery styles */
 .gallery a {
-    @apply border-0;
+    @apply border-none;
 }
+
 .gallery img {
     @apply rounded min-w-full min-h-full h-40 object-cover;
 }

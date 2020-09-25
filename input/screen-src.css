@@ -57,8 +57,23 @@ a:hover {
     @apply rounded;
 }
 
+.formatted code {
+    @apply p-4 bg-gray-600 block;
+}
 /* End article styles */
 
+/* Gallery styles */
+.gallery a {
+    @apply border-0;
+}
+.gallery img {
+    @apply rounded min-w-full min-h-full h-40 object-cover;
+}
+#baguetteBox-overlay img {
+    max-width: 90vw !important;
+    max-height: 90vh !important;
+}
+/* End of gallery styles */
 
 @tailwind utilities;
 

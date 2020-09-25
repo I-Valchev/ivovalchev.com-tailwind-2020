@@ -39,3 +39,12 @@ function onMenuClick() {
   document.getElementById('menuOutsideClick').classList.toggle('hidden');
 }
 /** END HAMBURGER **/
+
+/**
+  * GALLERY
+  **/
+
+window.addEventListener('load', function() {
+  const result = baguetteBox.run('.gallery');
+});
+/** END GALLERY **/

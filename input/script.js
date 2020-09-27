@@ -64,4 +64,5 @@ if(true) {
 }
 if (typeof ga === "function") {
   ga('create', 'UA-114536758-1', 'auto', {});
+}
 /** END GOOGLE ANALYTICS **/

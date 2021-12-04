@@ -11,8 +11,8 @@
     "build": "npm run tailwind && eleventy"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.11.0",
-    "tailwindcss": "^1.8.10",
-    "tailwindcss-dark-mode": "^1.1.6"
+    "@11ty/eleventy": "^0.11.1",
+    "tailwindcss": "^2.2.16",
+    "tailwindcss-dark-mode": "^1.1.7"
   }
 }

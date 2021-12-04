@@ -53,9 +53,15 @@
         </div>
     </nav>
 
-    <div class="p-8 sm:px-16 lg:max-w-4xl lg:m-auto">
+
+    {% unless wrapper == false %}
+    	<div class="p-8 sm:px-16 lg:max-w-4xl lg:m-auto">
+	{% endunless %}
         {{ content|safe }}
-    </div>
+
+    {% unless wrapper == false %}
+    	</div>
+    {% endunless %}
 <script src="/script.js"></script>
 </body>
 </html>

@@ -17,6 +17,9 @@ module.exports = {
           '0%, 100%': { transform: 'rotate(-5deg)' },
           '50%': { transform: 'rotate(5deg)' },
         }
+      },
+      zIndex: {
+        '-10': '-10',
       }
     },
   },
